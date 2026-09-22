@@ -43,6 +43,8 @@ h2 { color: #93ffd7; }
 h2::before { content: "~ "; }
 h3::before { content: "» "; color: #93ffd7; }
 h4::before { content: "  # "; color: #7d8598; }
+h5::before { content: "  · "; color: #7d8598; }
+h6::before { content: "  - "; color: #7d8598; }
 blockquote {
   margin: 0 0 1.15em; padding: 0.1em 0 0.1em 1ch;
   border-left: 2px solid #93ffd7; color: #a9b0c0;
@@ -137,11 +139,13 @@ nav.crumbs { margin-bottom: 1.5em; }
 
 <span class="mint">~</span> <a href="about.html">About</a>
 
+<span class="mint">~</span> <a href="https://github.com/Nss-Box">GitHub</a>
+
 <span class="mint">~</span> <a href="rss.xml">RSS</a>
 
 <span class="dim"># 一个跑在 tty 里的博客</span>
 </pre>
-<footer># Anonymous · <a href="rss.xml">rss</a> · style inspired by <a href="https://tmpout.sh/">tmp.0ut</a> <span class="cursor">█</span></footer>
+<footer># Anonymous · <a href="https://github.com/Nss-Box">github</a> · <a href="rss.xml">rss</a> · style inspired by <a href="https://tmpout.sh/">tmp.0ut</a> <span class="cursor">█</span></footer>
 </div>
 <script>(function(){var m=location.search.match(/[?&]giscus=([^&]+)/);var t=m?decodeURIComponent(m[1]):'';if(t){try{localStorage.setItem('giscus-session',t)}catch(e){}}else{try{t=localStorage.getItem('giscus-session')||''}catch(e){}}if(!t)return;var f=document.querySelector('.giscusbox iframe');if(f){var u=new URL(f.src);u.searchParams.set('session',t);f.src=u.toString();}if(m)history.replaceState(null,'',location.pathname);})();</script>
 </body>

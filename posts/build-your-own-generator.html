@@ -43,6 +43,8 @@ h2 { color: #93ffd7; }
 h2::before { content: "~ "; }
 h3::before { content: "» "; color: #93ffd7; }
 h4::before { content: "  # "; color: #7d8598; }
+h5::before { content: "  · "; color: #7d8598; }
+h6::before { content: "  - "; color: #7d8598; }
 blockquote {
   margin: 0 0 1.15em; padding: 0.1em 0 0.1em 1ch;
   border-left: 2px solid #93ffd7; color: #a9b0c0;
@@ -127,7 +129,7 @@ nav.crumbs { margin-bottom: 1.5em; }
 │                     █ █  │
 │                    █   █ │
 └──────────────────────────┘</pre>
-<nav class="crumbs content"><span class="mint">~</span> <a href="../">index</a> · <a href="../archive.html">archive</a></nav>
+<nav class="crumbs content"><span class="mint">~</span> <a href="../">index</a> · <a href="../archive.html">archive</a> · <a href="../about.html">about</a></nav>
 <article>
 <h1>一个零依赖静态博客生成器</h1>
 <p class="meta"><span class="mint">~</span> <span class="dim">2026-09-20</span> · <span class="dim">#python #工具</span></p>
@@ -160,7 +162,7 @@ for line in raw[3:end].strip().splitlines():
 <iframe src="https://giscus.app/zh-CN/widget?origin=https%3A%2F%2Fnss-box.github.io&amp;session=&amp;theme=https%3A%2F%2Fnss-box.github.io%2Fgiscus-theme.css&amp;reactionsEnabled=1&amp;emitMetadata=0&amp;inputPosition=bottom&amp;repo=Nss-Box%2FNss-Box.github.io&amp;repoId=R_kgDOUk8z0A&amp;category=Announcements&amp;categoryId=DIC_kwDOUk8z0M4DGIsO&amp;strict=1&amp;term=%2Fposts%2Fbuild-your-own-generator.html&amp;backLink=https%3A%2F%2Fnss-box.github.io%2Fposts%2Fbuild-your-own-generator.html&amp;description=%E4%B8%80%E4%B8%AA%E9%9B%B6%E4%BE%9D%E8%B5%96%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%94%9F%E6%88%90%E5%99%A8" title="comments" loading="lazy" width="100%" height="460" frameborder="0"></iframe>
 </div>
 </section>
-<footer># Anonymous · <a href="../rss.xml">rss</a> · style inspired by <a href="https://tmpout.sh/">tmp.0ut</a> <span class="cursor">█</span></footer>
+<footer># Anonymous · <a href="https://github.com/Nss-Box">github</a> · <a href="../rss.xml">rss</a> · style inspired by <a href="https://tmpout.sh/">tmp.0ut</a> <span class="cursor">█</span></footer>
 </div>
 <script>(function(){var m=location.search.match(/[?&]giscus=([^&]+)/);var t=m?decodeURIComponent(m[1]):'';if(t){try{localStorage.setItem('giscus-session',t)}catch(e){}}else{try{t=localStorage.getItem('giscus-session')||''}catch(e){}}if(!t)return;var f=document.querySelector('.giscusbox iframe');if(f){var u=new URL(f.src);u.searchParams.set('session',t);f.src=u.toString();}if(m)history.replaceState(null,'',location.pathname);})();</script>
 </body>
