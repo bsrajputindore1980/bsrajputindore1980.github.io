@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src * data:; font-src 'self'; form-action 'none'; base-uri 'none'; frame-src https://giscus.app">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2016%2016%27%3E%3Crect%20width%3D%2716%27%20height%3D%2716%27%20fill%3D%27%230A0B11%27/%3E%3Ctext%20x%3D%273%27%20y%3D%2712%27%20font-size%3D%2711%27%20fill%3D%27%2393ffd7%27%20font-family%3D%27monospace%27%3EN%3C/text%3E%3C/svg%3E">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<title>Nss.Box ~ 你好，世界：博客开张了</title>
+<style>
+@font-face { font-family: "unifont"; src: url("../font/unifont.woff") format("woff"); }
+html { background: #0A0B11; }
+body {
+  color: #FEFEFE; background: #0A0B11;
+  margin: 0; padding: 1.2em 2ch 3em 2ch;
+  font-family: "unifont", "Lucida Console", Monaco, monospace;
+  font-size: 16px; line-height: 1.4;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: #93ffd7; text-decoration: none; }
+a:hover { text-decoration: underline; }
+::selection { background: #93ffd7; color: #0A0B11; }
+.page { max-width: 100%; }
+pre { font-family: inherit; margin: 0; }
+/* 行高必须严格 1.0，│ ─ █ 等字符才能跨行无缝拼接（与 tmp.0ut 一致） */
+pre.logo { line-height: 1.0; margin-bottom: 1.6em; overflow-x: auto; }
+pre.logo.float { float: right; margin: 0 0 1em 2ch; max-width: 100%; }
+.content { white-space: pre-wrap; overflow-wrap: break-word; max-width: 100ch; }
+.dim { color: #7d8598; }
+.mint { color: #93ffd7; }
+.cursor { animation: blink 1.2s steps(1) infinite; color: #93ffd7; }
+@keyframes blink { 50% { opacity: 0; } }
+pre.box { white-space: pre; overflow-x: auto; line-height: 1.0; }
+article { max-width: 100ch; overflow: hidden; }
+article p { margin: 0 0 1.15em; white-space: pre-wrap; overflow-wrap: break-word; }
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em; font-weight: normal;
+  margin: 1.7em 0 0.9em; line-height: 1.4;
+}
+h1 { border-bottom: 1px solid #303548; padding-bottom: 0.5em; }
+h2 { color: #93ffd7; }
+h2::before { content: "~ "; }
+h3::before { content: "» "; color: #93ffd7; }
+h4::before { content: "  # "; color: #7d8598; }
+blockquote {
+  margin: 0 0 1.15em; padding: 0.1em 0 0.1em 1ch;
+  border-left: 2px solid #93ffd7; color: #a9b0c0;
+}
+blockquote p { margin: 0; }
+code {
+  font-family: inherit; background: #161927; color: #c9f7e3;
+  padding: 0.05em 0.35em;
+}
+.codebox { border: 1px solid #262b3d; background: #0e1120; margin: 0 0 1.2em; }
+.codebox .lang { display: block; color: #93ffd7; border-bottom: 1px solid #262b3d;
+  padding: 0.2em 1ch; }
+.codebox pre { padding: 0.7em 1ch; overflow-x: auto; line-height: 1.35;
+  white-space: pre; font-size: 15px; }
+.codebox code { background: none; color: #dfe3ee; padding: 0; }
+table { border-collapse: collapse; margin: 0 0 1.2em; }
+th, td { border: 1px solid #262b3d; padding: 0.15em 1ch; }
+th { color: #93ffd7; background: #10131f; }
+hr { border: 0; border-top: 1px dashed #303548; margin: 1.6em 0; }
+ul, ol { margin: 0 0 1.15em; padding-left: 2ch; }
+li { margin: 0.15em 0; }
+ul { list-style: none; }
+ul > li::before { content: "- "; color: #93ffd7; margin-left: -2ch; padding-right: 2ch; }
+.imgwrap { display: block; margin: 0 0 1.2em; }
+.imgwrap img { display: block; max-width: 100%; }
+.imgcap { display: block; color: #7d8598; margin-top: 0.3em; }
+.comments { max-width: 100ch; margin-top: 2.5em; }
+.comment { border: 1px solid #262b3d; background: #0e1120;
+  padding: 0.5em 1ch 0.2em; margin-bottom: 0.9em; }
+.chead { color: #7d8598; margin-bottom: 0.4em; }
+.cname { color: #93ffd7; }
+.cbody p { margin: 0 0 0.7em; }
+.cbody > :last-child { margin-bottom: 0.5em; }
+.cfoot { margin-top: 1em; }
+/* 留言表单：纯 HTML 零 JS，样式做成终端问答的样子 */
+.cform { border: 1px solid #262b3d; background: #0e1120;
+  padding: 0.7em 1ch; margin-top: 0.4em; }
+.cform label { display: block; color: #93ffd7; margin-bottom: 0.25em; }
+.cform input[type="text"], .cform textarea {
+  display: block; width: 100%; box-sizing: border-box;
+  background: #0A0B11; color: #FEFEFE;
+  border: 1px solid #262b3d; font: inherit; font-size: 15px;
+  padding: 0.3em 0.6ch; margin-bottom: 0.8em;
+}
+.cform input:focus, .cform textarea:focus { outline: none; border-color: #93ffd7; }
+.cform button {
+  background: #0A0B11; color: #93ffd7; border: 1px solid #93ffd7;
+  font: inherit; padding: 0.25em 1.5ch; cursor: pointer;
+}
+.cform button:hover { background: #93ffd7; color: #0A0B11; }
+.hp { position: absolute; left: -9999px; }
+/* giscus 直评 iframe：与本站配色一致的皮肤在构建时生成 */
+.giscusbox { margin-top: 0.4em; }
+.giscusbox iframe { display: block; width: 100%; border: 1px solid #262b3d;
+  background: #0e1120; }
+footer { margin-top: 3em; white-space: pre-wrap; color: #7d8598; clear: both; }
+nav.crumbs { margin-bottom: 1.5em; }
+@media (max-width: 640px) { body { font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="page">
+<pre class="logo float">┌──────────────────────────┐
+│ █   █ ▄████ ▄████        │
+│ ██  █ █     █            │
+│ █ █ █ ▀███▄ ▀███▄        │
+│ █  ██     █     █  ▄     │
+│ █   █ ████▀ ████▀        │
+│                    ████▄ │
+│                    █   █ │
+│                    ████▀ │
+│                    █   █ │
+│                    ████▀ │
+│                    ▄▄▄▄▄ │
+│                    █   █ │
+│                    █   █ │
+│                    █   █ │
+│                    ▀▀▀▀▀ │
+│                    █   █ │
+│                     █ █  │
+│                      █   │
+│                     █ █  │
+│                    █   █ │
+└──────────────────────────┘</pre>
+<nav class="crumbs content"><span class="mint">~</span> <a href="../">index</a> · <a href="../archive.html">archive</a></nav>
+<article>
+<h1>你好，世界：博客开张了</h1>
+<p class="meta"><span class="mint">~</span> <span class="dim">2026-09-22</span> · <span class="dim">#随笔 #meta</span></p>
+<p>博客开张了。整站只有黑底、等宽字体和一种薄荷绿，像一台安静运行的老终端。</p>
+<p><span class="imgwrap"><img src="../images/terminal.svg" alt="一张终端风格的小插图"><span class="imgcap">[一张终端风格的小插图]</span></span></p>
+<p>灵感来自 <a href="https://tmpout.sh/" rel="noopener noreferrer">tmp.0ut</a> —— 一个完全用 ASCII 字符排版的电子杂志。它证明了网页可以不要图片、不要圆角、不要渐变，只需要把字符摆在正确的位置上。</p>
+<blockquote><p>简单的东西最难做简单。</p></blockquote>
+<h2>这个博客怎么运作</h2>
+<p>整个站点是一个零依赖的 Python 脚本 <code>build.py</code> 生成的静态 HTML：</p>
+<ul><li>每篇文章就是 <code>content/posts/</code> 下的一个 Markdown 文件</li><li>文件名以日期开头，例如 <code>2026-09-22-hello-world.md</code></li><li>front matter 里写标题、日期和标签</li><li>运行 <code>python build.py</code>，产物全部落在 <code>site/</code> 目录</li></ul>
+<p>没有数据库，没有npm，没有构建链依赖。删掉 <code>site/</code> 重新 build，一切照旧。</p>
+<h2>为什么喜欢终端风格</h2>
+<p>终端是一切计算的原点。在图形界面铺天盖地的年代，一块黑底、几行等宽字符反而成了最诚实的信息展示方式：</p>
+<ol><li>没有装饰，注意力全部留给文字本身</li><li>纯文本天然可版本管理、可检索、可长期保存</li><li>盒子、点线、对齐，这些约束本身就是乐趣</li></ol>
+<p>接下来打算写写系统底层、逆向工程和工具链相关的东西。RSS 在导航里，欢迎订阅。</p>
+</article>
+<section class="comments">
+<h2>COMMENTS (2)</h2>
+<div class="comment">
+<div class="chead"><span class="cname">~ neo</span> <span class="dim">@ 2026-09-22 11:03</span></div>
+<div class="cbody"><p>风格一眼爱了，盒子 logo 太有味道。蹲一个 ELF 系列长文！</p></div>
+</div>
+<div class="comment">
+<div class="chead"><span class="cname">~ trinity</span> <span class="dim">@ 2026-09-22 15:47</span></div>
+<div class="cbody"><p>双宽对齐确实舒服，archive 页的盒子强迫症狂喜。</p>
+<p>问一个：手机上长代码块会横向滚动吗？</p></div>
+</div>
+<div class="giscusbox">
+<iframe src="https://giscus.app/zh-CN/widget?origin=https%3A%2F%2Fnss-box.github.io&amp;session=&amp;theme=https%3A%2F%2Fnss-box.github.io%2Fgiscus-theme.css&amp;reactionsEnabled=1&amp;emitMetadata=0&amp;inputPosition=bottom&amp;repo=Nss-Box%2FNss-Box.github.io&amp;repoId=R_kgDOUk8z0A&amp;category=Announcements&amp;categoryId=PENDING&amp;strict=1&amp;term=%2Fposts%2Fhello-world.html&amp;backLink=https%3A%2F%2Fnss-box.github.io%2Fposts%2Fhello-world.html&amp;description=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E4%B8%96%E7%95%8C%EF%BC%9A%E5%8D%9A%E5%AE%A2%E5%BC%80%E5%BC%A0%E4%BA%86" title="comments" loading="lazy" width="100%" height="460" frameborder="0"></iframe>
+</div>
+</section>
+<footer># Anonymous · <a href="../rss.xml">rss</a> · style inspired by <a href="https://tmpout.sh/">tmp.0ut</a> <span class="cursor">█</span></footer>
+</div>
+</body>
+</html>
